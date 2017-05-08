@@ -8,8 +8,8 @@
 
 ## Samples
 
-* [Basic](./Assets/Samples/01.Basic/README.md)
-* [UI](./Assets/Samples/03.UI/README.md)
+* [Basic](./Doc/Basic/README.md)
+* [UI](./Doc/UI/README.md)
 
 ## Dependencies
 
