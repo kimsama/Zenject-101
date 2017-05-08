@@ -6,7 +6,6 @@ using UniRx;
 
 public class UIView : MonoBehaviour
 {
-
     [SerializeField]
     Button button;
 

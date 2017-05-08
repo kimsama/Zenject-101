@@ -6,10 +6,10 @@ using Zenject;
 public class User : MonoBehaviour
 {
     [Inject]
-    SharedData sharedData;
+    ReferenceData referenceData;
 
     void Awake ()
     {
-        Debug.Log(sharedData.name);
+        Debug.Log(referenceData.name);
     }
 }

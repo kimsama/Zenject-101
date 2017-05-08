@@ -39,6 +39,8 @@ public class Installer
 
 마지막 라인의 Resolve 호출부터 살펴보자. 우선 Resolve<BindClass>로 BindClass의 인스턴스를 생성한다. BindClass의 생성자를 보면 Foo 클래스가 필요한다. Container.Bind<Foo>로 Container에 Foo 클래스가 등록되어 있으므로 BindClass의 인스턴스 생성시 Foo 클래스의 인스턴스에 대한 참조가 이루어진다. 이렇게 Container.Bind로 참조 관계를 정의하는 것이 Container 사용의 핵심이다.  
 
+> IoC(Inversion of Control), 위의 예에서 볼 수 있듯이 객체 생성의 흐름이 반대로 되기 때문에 *Inversion of Control* 이라고 한다. 생성에 대한 제어는 더 이상 사용자가 아니라 객체를 생성하고 삽입하는 프레임워크에서 이루어진다. 
+
 ## SceneContext 생성.
 
 GameObject > Zenject > SceneContext 메뉴를 선택하면 Hierarchy 뷰에 SceneContext 컴포넌트를 포함하는 GameObject가 하나 생성된다.
