@@ -1,7 +1,12 @@
-# Zenject
+# Basic
 
+여기에서는 Zenject 사용을 위한 가장 기본적인 방법에 대해서 알아 본다.
 
-Zenject의 가장 기본이 되는 작동은 아래와 같다.
+* SceneContext
+* ZenjectBinding
+* Inject Attribute
+
+Zenject를 사용하기 위해서는 먼저 Zenject의 Container에 대한 이해가 필요하다. Zenject의 가장 기본이 되는 작동은 아래와 같다.
 
 1. Container에 객체의 형(type)을 등록.
 2. Container에 등록된 객체의 인스턴스를 생성.
@@ -84,4 +89,13 @@ public class User : MonoBehaviour
 
 MonoBehaviour를 상속한 클래스의 경우 Inject 속성을 사용하여 자동으로 참조를 설정할 수 있다.
 
-User.Awake 함수가 호출되는 시점에서 이미 ZenjectBinding에 ReferenceData 인스턴스로 Cointainer에 등록되어 있기 때문에 ReferenceData 인스턴스에 대한 별도의 참조에 대한 처리 없이 ReferenceData 인스턴스의 사용이 가능하다.
+User.Awake 함수가 호출되는 시점에서 이미 ZenjectBinding에 ReferenceData 인스턴스로 Cointainer에 등록되어 있기 때문에 ReferenceData 인스턴스를 참조하기 위한 별도의 처리 과정이 없이도 ReferenceData 인스턴스의 사용이 가능하다.
+
+
+>``` csharp
+>public class User : MonoBehaviour
+>{
+>    // 이렇게 public으로 선언한 후 ReferenceData가 있는 GameObject를
+>    // 마우스로 드래그해서 참조하는 방법을 사용하지 않아도 된다는 이야기다.
+>    public ReferenceData referenceData;
+>```
